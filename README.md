@@ -9,13 +9,6 @@ Copy the file into your /tmp directory, enter it on console, terminal, ssh and:
 sudo rm -r /boot/overlays/
 sudo rm -r /lib/firmware/
 cd /tmp
-tar xzf <KERNELFILE>.tgz
-cd boot
-sudo cp -rd * /boot/
-cd ../lib
-sudo cp -rd * /lib/
-cd ..
-rm -r lib
-rm -r boot
+sudo tar xzf <KERNELFILE>.tgz -C /
 sudo shutdown -r now
 ```
