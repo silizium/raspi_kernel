@@ -5,6 +5,7 @@ Just a hopefully growning collection of ready to use kernels. The compiling and 
 
 Copy the file into your /tmp directory, enter it on console, terminal, ssh and:
 
+`
 sudo rm -r /boot/overlays/
 sudo rm -r /lib/firmware/
 cd /tmp
@@ -17,4 +18,4 @@ cd ..
 rm -r lib
 rm -r boot
 sudo shutdown -r now
-
+`
