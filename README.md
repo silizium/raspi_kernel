@@ -54,4 +54,4 @@ policy: fifo: loadavg: 2.18 1.10 0.52 2/131 8038
 
 T: 0 ( 8027) P:80 I:500 C: 100000 Min:     24 Act:   44 Avg:   48 Max:     105
 ```
-Executed on a Raspi 1b, 900 MHz. With the original Kernel I high variance in the maximum latency between 600 and 6000 µsec.
+Executed on a Raspi 1b, 900 MHz. With the original Kernel I had high variance in the maximum latency between 600 and 6000 µsec.
