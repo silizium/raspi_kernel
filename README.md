@@ -6,9 +6,10 @@ Just a hopefully growning collection of ready to use kernels. The compiling and 
 Copy the file into your /tmp directory, enter it on console, terminal, ssh and:
 
 ```
-sudo rm -r /boot/overlays/
-sudo rm -r /lib/firmware/
+sudo rm -r /boot/overlays/ /lib/firmware
 cd /tmp
-sudo tar xzf <KERNELFILE>.tgz -C /
+tar xzf <KERNELFILE>.tgz
+sudo cp -rd lib /
+sudo cp -rd boot /
 sudo shutdown -r now
 ```
