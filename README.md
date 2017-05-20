@@ -13,3 +13,4 @@ sudo cp -rd lib /
 sudo cp -rd boot /
 sudo shutdown -r now
 ```
+If you are using rpi-update, execute the rpi-update /before/ you insert the new Kernel, because it would be overwritten.
