@@ -36,3 +36,22 @@ Copyright (C) 2016 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ```
+Benchmarks (no load):
+```
+$ sudo ~/src/rt-tests/cyclictest -m -t1 -p 80 -n -i 500 -l 100000
+# /dev/cpu_dma_latency set to 0us
+policy: fifo: loadavg: 0.76 0.33 0.17 1/129 7922          
+
+T: 0 ( 7911) P:80 I:500 C: 100000 Min:     18 Act:   32 Avg:   39 Max:     113
+```
+Benchmark (full load + network):
+```
+host> sudo ping -i 0.01 raspi
+raspi> cp /dev/zero /dev/null & 
+raspi> sudo ~/src/rt-tests/cyclictest -m -t1 -p 80 -n -i 500 -l 100000
+# /dev/cpu_dma_latency set to 0us
+policy: fifo: loadavg: 2.18 1.10 0.52 2/131 8038          
+
+T: 0 ( 8027) P:80 I:500 C: 100000 Min:     24 Act:   44 Avg:   48 Max:     105
+```
+Executed on a Raspi 1b, 900 MHz. With the original Kernel I high variance in the maximum latency between 600 and 6000 µsec.
