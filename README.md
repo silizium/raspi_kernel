@@ -26,6 +26,9 @@ git clone https://github.com/raspberrypi/linux.git
 Process described here:
 http://www.frank-durr.de/?p=203
 
+How to do RT here:
+https://rt.wiki.kernel.org/index.php/RT_PREEMPT_HOWTO
+
 I just compiled the Kernel (takes about a week on a Raspi 1B) and I do provide the result here. Do with it, what you like but don't blame me if it is not working or you are wrecking everything or so. 
 
 I compiled that thing with a cross compiling process with a gcc 6.3 or did I use the toolchain? Whatever. It works for me. 
